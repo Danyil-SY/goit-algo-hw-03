@@ -18,21 +18,21 @@
 import random
 
 
-def get_numbers_ticket(min, max, quantity):
+def get_numbers_ticket(min_val, max_val, quantity):
     # Generate a list of unique random numbers within a specified range
-    if quantity > (max - min + 1):
+    if quantity > (max_val - min_val + 1):
         return 'Quantity of numbers exceeds the range available.'
-    if min < 1 or max > 1000:
+    if min_val < 1 or max_val > 1000:
         return 'The entered values are out of range.'
     
     tickets = set()
 
     while len(tickets) < quantity:
-        tickets.add(random.randint(min ,max))
+        tickets.add(random.randint(min_val ,max_val))
 
     return sorted(list(tickets))
     
- # Test data
+# Test data
 test_data = [
     # Correct data
     (1, 49, 6),
