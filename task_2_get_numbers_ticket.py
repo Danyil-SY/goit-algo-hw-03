@@ -21,13 +21,10 @@ import random
 def get_numbers_ticket(min_val, max_val, quantity):
     # Generate a list of unique random numbers within a specified range
     if quantity > (max_val - min_val + 1):
-        print('Quantity of numbers exceeds the range available.')
         return []
     elif min_val < 1 or max_val > 1000:
-        print('The entered values are out of range.')
         return []
     elif min_val > max_val:
-        print('The "min" value is bigger than "max".')
         return []
 
     
