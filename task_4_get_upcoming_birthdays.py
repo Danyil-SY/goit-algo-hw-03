@@ -38,9 +38,9 @@ def get_upcoming_birthdays(users):
 
         if 0 <= days_until_birthday <= 7:
             if birthday.weekday() == 5:
-                birthday += timedelta(days_until_birthday + 1)
+                birthday += timedelta(days=2)
             elif birthday.weekday() == 6:
-                birthday += timedelta(days_until_birthday - 1)          
+                birthday += timedelta(days=1)            
 
             upcoming_birthdays.append({
                 'name': user['name'],
@@ -71,8 +71,10 @@ print("Список привітань на цьому тижні:", upcoming_bi
 # The result:
 #
 # Список привітань на цьому тижні: [{'name': 'Nick Darsel', 'congratulation_date': '2024.01.29'}, 
-#                                   {'name': 'Jane', 'congratulation_date': '2024.01.29'}, 
-#                                   {'name': 'Frederick', 'congratulation_date': '2024.01.29'}, 
+#                                   {'name': 'Jake Smith', 'congratulation_date': '2024.01.29'}, 
+#                                   {'name': 'John Doe', 'congratulation_date': '2024.01.29'}, 
 #                                   {'name': 'Ethan Williams', 'congratulation_date': '2024.01.30'}, 
-#                                   {'name': 'Alice', 'congratulation_date': '2024.01.29'}, 
-#                                   {'name': 'Bob', 'congratulation_date': '2024.02.02'}]
+#                                   {'name': 'Smith Smith', 'congratulation_date': '2024.01.31'}, 
+#                                   {'name': 'Liam Smith', 'congratulation_date': '2024.02.01'}, 
+#                                   {'name': 'Mohel Smith', 'congratulation_date': '2024.02.02'}, 
+#                                   {'name': 'John Dark', 'congratulation_date': '2024.02.05'}]
